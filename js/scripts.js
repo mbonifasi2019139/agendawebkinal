@@ -2,7 +2,9 @@ let formularioLogin = document
     .querySelector("#formulario-login")
     .addEventListener("submit", (e) => {
         e.preventDefault();
-        window.location.href = "contactos.html";
+        Swal.fire("Marcos Bonifasi - 2019139 - Agenda Web").then(() => {
+            window.location.href = "contactos.html";
+        });
     });
 
 let crearCuenta = document
