@@ -1,0 +1,136 @@
+:root {
+    --primaryColor: #61ffc6;
+    --colorFondo: #e5f1e5;
+    --fuentePrincipal: 'Noto Sans KR', sans-serif;
+    --fuenteEspecial: 'Fredoka One', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--colorFondo);
+    font-family: var(--fuentePrincipal);
+}
+
+
+/* - Utilidades -*/
+
+.centrar {
+    margin: 0 auto!important;
+}
+
+input {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    border: none;
+}
+
+.btn,
+.btn input[type=submit] {
+    text-decoration: none;
+    font-size: 1.7rem!important;
+}
+
+.btn-login {
+    color: #fff;
+    background-color: black;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+}
+
+
+/** Login **/
+
+.contenedor-principal {
+    height: 100vh;
+    max-width: 120rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    max-height: 80rem;
+    max-width: 80rem;
+    width: 50rem;
+    background-color: var(--primaryColor);
+    opacity: 0.85;
+    padding: 2rem;
+    text-align: center;
+    -webkit-box-shadow: 2px 3px 16px -4px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 2px 3px 16px -4px rgba(0, 0, 0, 0.57);
+    box-shadow: 2px 3px 16px -4px rgba(0, 0, 0, 0.57);
+    border-radius: 18px 0px 18px 0px;
+    -moz-border-radius: 18px 0px 18px 0px;
+    -webkit-border-radius: 18px 0px 18px 0px;
+    border: 2px solid #fff;
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal {
+        height: 100vh;
+        width: 100vw;
+    }
+    .login-card {
+        height: 100vh;
+        width: 100wh;
+        border: none;
+        border-radius: 0px;
+    }
+}
+
+.formulario {
+    height: 100%;
+    width: 100%;
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.campos {
+    width: inherit;
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.campo.titulo img {
+    height: 6rem;
+    max-height: 8rem;
+    margin-left: 1rem;
+}
+
+.campo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.campo a:hover {
+    color: #dbdbdb;
+}
