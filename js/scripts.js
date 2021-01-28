@@ -8,5 +8,5 @@ let formularioLogin = document
 let crearCuenta = document
     .querySelector(".campo.link")
     .addEventListener("click", () => {
-        Swal.fire("Any fool can use a computer");
+        Swal.fire("No se ha desarrollado esta funcion");
     });
