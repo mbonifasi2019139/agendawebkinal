@@ -21,6 +21,12 @@ body {
     font-family: var(--fuentePrincipal);
 }
 
+h1 {
+    font-size: 4rem;
+    color: #545659;
+    ;
+}
+
 
 /* - Utilidades -*/
 
@@ -133,4 +139,72 @@ input {
 
 .campo a:hover {
     color: #dbdbdb;
+}
+
+
+/* *Contactos* */
+
+.contenedor-contactos {
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+}
+
+.panel-izquierdo {
+    height: 100vh;
+    width: 25%;
+    background-color: var(--primaryColor);
+    border-right: 1px solid #000;
+    text-align: center;
+}
+
+.contactos-principal {
+    padding: 5rem 2rem;
+    width: 75%;
+    text-align: center;
+}
+
+.perfil-usuario {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 15rem;
+}
+
+.perfil-usuario a {
+    color: #545659;
+}
+
+.navegacion {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.navegacion a {
+    height: 5rem;
+    font-size: 2.3rem;
+    text-decoration: none;
+    color: #545659;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7rem;
+    font-weight: bold;
+    transition: margin .9s ease;
+}
+
+.navegacion a:hover {
+    border-radius: 5%;
+    opacity: 0.7;
+    border-bottom: .3rem solid #b9b9b9;
+    background-color: #55dfad;
+    margin: 0 2rem;
+    font: 3rem;
+}
+
+.configuraciones a {
+    font-size: 5rem;
 }
