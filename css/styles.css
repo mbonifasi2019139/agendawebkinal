@@ -152,27 +152,50 @@ input {
 
 .panel-izquierdo {
     height: 100vh;
-    width: 25%;
+    width: 20%;
     background-color: var(--primaryColor);
     border-right: 1px solid #000;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgb(41, 242, 170);
+    background: linear-gradient(90deg, rgba(41, 242, 170, 1) 0%, rgba(97, 255, 198, 1) 35%, rgba(190, 254, 122, 0.9738095921962535) 100%);
 }
 
 .contactos-principal {
     padding: 5rem 2rem;
-    width: 75%;
+    width: 80%;
     text-align: center;
 }
 
 .perfil-usuario {
-    padding: 1rem;
     display: flex;
     justify-content: center;
-    font-size: 15rem;
+    flex-direction: column;
 }
 
-.perfil-usuario a {
-    color: #545659;
+.perfil-usuario img {
+    width: 100%;
+    height: auto;
+    max-width: 15rem;
+    border-radius: 40%;
+    margin: 0 auto;
+}
+
+.perfil-usuario p {
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    background-color: #545659;
+    margin: 2rem 6rem;
+    padding: 1rem;
+    border-radius: 5%;
+    transition: margin .5s ease;
+}
+
+.perfil-usuario p:hover {
+    margin: 1rem 5rem;
+    cursor: pointer;
 }
 
 .navegacion {
@@ -180,7 +203,7 @@ input {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .navegacion a {
@@ -205,6 +228,20 @@ input {
     font: 3rem;
 }
 
+.configuraciones {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .configuraciones a {
-    font-size: 5rem;
+    text-decoration: none;
+    font-size: 4rem;
+    color: #545659;
+    transition: font-size .5s ease;
+}
+
+.configuraciones a:hover {
+    font-size: 4.5rem;
 }
