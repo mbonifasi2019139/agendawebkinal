@@ -35,3 +35,21 @@ if (document.querySelector("#configuraciones")) {
             Swal.fire("No se ha desarrollado esta funcion");
         });
 }
+
+// --------------------------- Pefil ------------------------------------
+if (document.querySelector("#password")) {
+    var password = document.querySelector("#password");
+}
+
+if (document.querySelector("#togglePassword")) {
+    var togglePassword = document.querySelector("#togglePassword");
+}
+
+togglePassword.onclick = () => {
+    const type =
+        password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+
+    //Mostrando las contrasena
+    togglePassword.classList.toggle("fas fa-eye-slash");
+};

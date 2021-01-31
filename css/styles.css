@@ -1,5 +1,6 @@
 :root {
     --primaryColor: #61ffc6;
+    --secondColor: #b3ed82;
     --colorFondo: #e5f1e5;
     --fondoSuave: #eef3ee;
     --fuentePrincipal: 'Noto Sans KR', sans-serif;
@@ -51,6 +52,7 @@ input {
     font-size: 1.7rem!important;
     opacity: .8;
     transition: opacity .5s ease;
+    text-transform: uppercase;
 }
 
 input[type=submit]:hover {
@@ -111,7 +113,6 @@ input[type=submit]:hover {
     max-height: 80rem;
     max-width: 80rem;
     width: 50rem;
-    background-color: var(--primaryColor);
     opacity: 0.85;
     padding: 2rem;
     text-align: center;
@@ -121,6 +122,8 @@ input[type=submit]:hover {
     border-radius: 18px 0px 18px 0px;
     -moz-border-radius: 18px 0px 18px 0px;
     -webkit-border-radius: 18px 0px 18px 0px;
+    background: rgb(41, 242, 170);
+    background: linear-gradient(90deg, rgba(41, 242, 170, 1) 0%, rgba(97, 255, 198, 1) 35%, rgba(190, 254, 122, 0.9738095921962535) 100%);
     border: 2px solid #fff;
 }
 
@@ -217,12 +220,18 @@ input[type=submit]:hover {
     flex-direction: column;
 }
 
-.perfil-usuario img {
+.perfil-usuario img,
+.header-perfil img {
     width: 100%;
     height: auto;
     max-width: 15rem;
     border-radius: 40%;
     margin: 0 auto;
+    border: none;
+}
+
+.perfil-usuario.usuario img {
+    border: none;
 }
 
 #usuario-enlace {
@@ -361,9 +370,10 @@ tr:nth-child(even) {
 .formulario-cc {
     flex-direction: column;
     background-color: var(--fondoSuave);
-    width: 50rem;
+    width: 80rem;
     padding: 2rem;
-    background-color: #b3ed82;
+    background-color: var(--secondColor);
+    border-radius: 2rem;
 }
 
 .datos-fcc {
@@ -371,32 +381,120 @@ tr:nth-child(even) {
     padding: 0 2rem;
 }
 
+.datos-fcc form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+.datos-fcc form .campo:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0 20%;
+}
+
 .detalle-contacto {
     flex-direction: column;
     font-size: 10rem;
     max-width: 60rem;
     margin: 0 auto;
-    background-color: wheat;
+    padding: 2rem;
+    background-color: var(--secondColor);
+    border-radius: 2rem;
 }
 
-.img-contacto {
+.contacto,
+.user {
     /* font-size: 10rem; */
-    background-color: white;
+    /* background-color: white; */
     width: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 2rem;
 }
 
-.detalles {
+.user {
+    border: none;
+}
+
+.contacto p,
+.user p {
+    text-transform: uppercase;
+    font-family: var(--fuenteEspecial);
+    margin: 1rem;
+}
+
+
+/* *Perfil* */
+
+.perfil {
+    background-color: var(--secondColor);
+    max-width: 100rem;
+    padding: 0 2rem;
+    display: block;
+    border-radius: 2rem;
+}
+
+@media (min-width: 768px) {
+    .perfil {
+        display: flex;
+    }
+}
+
+.header-perfil {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    margin-right: 2rem;
+}
+
+.detalles,
+.datos-perfil {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 10rem;
+    column-gap: 2rem;
     row-gap: 1rem;
     font-size: 2rem;
-    background-color: white;
-    padding: 2rem;
+    padding: 2rem 0;
+    align-items: center;
 }
 
-.detalle {
+.campo-detalle {
+    font-weight: 800;
+}
+
+.detalle,
+.detalle-perfil {
     width: 100%;
-    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: .8rem 0.5rem;
+}
+
+.detalle-perfil:last-child {
+    font-size: .8em;
+    color: #fff;
+    background-color: #ca1919;
+    position: relative;
+}
+
+.detalle-perfil input[type=checkbox] {
+    background-color: #000;
+    color: #000;
+    font-size: 20rem;
+}
+
+.detalle-perfil i {
+    color: #000;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+}
+
+#password {
+    height: 4rem;
 }
