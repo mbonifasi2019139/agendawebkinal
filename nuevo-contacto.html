@@ -21,7 +21,9 @@
                 <p href="#" id="usuario-enlace">mbonifasi-2019139@kinal.edu.gt</p>
             </div>
             <nav class="navegacion">
+                <a href="perfil.html">Perfil</a>
                 <a href="contactos.html">Contactos</a>
+                <a href="nuevo-contacto.html">Nuevo Contacto</a>
             </nav>
             <div class="configuraciones">
                 <a href="index.html"><i class="fas fa-arrow-alt-circle-left"></i></a>
@@ -45,7 +47,10 @@
                             <input type="text" placeholder="Apellidos" required>
                         </div>
                         <div class="campo">
-                            <input type="text" placeholder="Teléfono" required>
+                            <input type="text" placeholder="Célular" required>
+                        </div>
+                        <div class="campo">
+                            <input type="text" placeholder="Teléfono de casa" required>
                         </div>
                         <div class="campo">
                             <input type="email" placeholder="Correo" required>
@@ -57,7 +62,20 @@
                             <input type="date" placeholder="Fecha de Creacion" required>
                         </div>
                         <div class="campo">
-                            <input type="submit" value="Crear" class="btn" required>
+                            <select name="" class="select-css">
+                                <option value="" selected disabled>--Selecciones un tipo de sangre--</option>
+                                <option value="">O negativo</option>
+                                <option value="">O positivo</option>
+                                <option value="">A negativo</option>
+                                <option value="">A positivo</option>
+                                <option value="">B negativo</option>
+                                <option value="">B positivo</option>
+                                <option value="">AB negativo</option>
+                                <option value="">AB positivo</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <input type="submit" value="guardar" class="btn" required>
                         </div>
                     </form>
                 </div>
